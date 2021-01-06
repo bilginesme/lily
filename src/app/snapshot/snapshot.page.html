@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Snapshot
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col class="illustration-col">
+      <app-aspect-ratio [ratio]="{w:900, h:900}">
+        <app-image-shell class="illustration-image" animation="spinner" [src]="'./assets/sample-images/walkthrough/logo-tr-large.png'" [alt]="'walkthrough'"></app-image-shell>
+      </app-aspect-ratio>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <p class="info-paragraph">
+        <br><br>
+        Snapshot here x4
+      </p>
+    </ion-col>  
+  </ion-row>  
+</ion-content>

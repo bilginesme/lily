@@ -1,0 +1,53 @@
+{
+  "userImage": "./assets/sample-images/notifications/bilgin-100x100.png",
+  "name": "Bilgin Esme",
+  "membership": "PRO",
+  "job": "SW Developer",
+  "likes": "1553",
+  "followers": "537K",
+  "following": "636",
+  "offers": "5",
+  "asks": "2",
+  "activity": "1",
+  "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  "friends": [
+    {
+      "image": "./assets/sample-images/notifications/100x100Notification1.jpg",
+      "name": "Martin"
+    },
+    {
+      "image": "./assets/sample-images/notifications/100x100Notification2.jpg",
+      "name": "Jessica"
+    },
+    {
+      "image": "./assets/sample-images/notifications/100x100Notification3.jpg",
+      "name": "Judith"
+    },
+    {
+      "image": "./assets/sample-images/notifications/100x100Notification5.jpg",
+      "name": "Kirsten"
+    },
+    {
+      "image": "./assets/sample-images/notifications/100x100Notification6.jpg",
+      "name": "Phillip"
+    },
+    {
+      "image": "./assets/sample-images/notifications/100x100Notification7.jpg",
+      "name": "Diane"
+    }
+  ],
+  "photos": [
+    {
+      "image": "./assets/interests/languages.jpg"
+    },
+    {
+      "image": "./assets/interests/art-and-design.jpg"
+    },
+    {
+      "image": "./assets/interests/games.jpg"
+    },
+    {
+      "image": "./assets/interests/technology.jpg"
+    }
+  ]
+}

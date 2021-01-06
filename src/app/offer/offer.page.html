@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Offer
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="forms-validations-content">
+  <form class="validations-form" [formGroup]="validationsForm" (ngSubmit)="onSubmit(validationsForm.value)">
+    <ion-list class="inputs-list" lines="full">
+      <ion-list-header>
+        <ion-label class="header-title">Make Your Offer</ion-label>
+      </ion-list-header>
+
+      <ion-item class="input-item">
+        <ion-label position="floating">Offer Title</ion-label>
+        <ion-input type="text" formControlName="offer_title" clearInput></ion-input>
+      </ion-item>
+      <div class="error-container">
+        <ng-container *ngFor="let validation of validations.offer_title">
+          <div class="error-message" *ngIf="validationsForm.get('offer_title').hasError(validation.type) && (validationsForm.get('offer_title').dirty || validationsForm.get('offer_title').touched)">
+            <ion-icon name="information-circle-outline"></ion-icon>
+            <span>{{ validation.message }}</span>
+          </div>
+        </ng-container>
+      </div>
+
+      <ion-item class="input-item">
+        <ion-label position="floating">Offer Body</ion-label>
+        <ion-textarea formControlName="offer_body" rows="4" placeholder="Enter your offer"></ion-textarea>
+      </ion-item>
+      <div class="error-container">
+        <ng-container *ngFor="let validation of validations.offer_body">
+          <div class="error-message" *ngIf="validationsForm.get('offer_body').hasError(validation.type) && (validationsForm.get('offer_body').dirty || validationsForm.get('offer_body').touched)">
+            <ion-icon name="information-circle-outline"></ion-icon>
+            <span>{{ validation.message }}</span>
+          </div>
+        </ng-container>
+      </div>
+
+      <ion-item class="input-item">
+        <ion-label position="floating">Category</ion-label>
+        <ion-select formControlName="offer_category" cancelText="Cancel" okText="OK">
+          <ion-select-option *ngFor="let offerCategory of offerCategories" [value]="offerCategory.CategoryID" >{{ offerCategory.Name }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+    </ion-list>
+ 
+    <ion-button class="submit-btn" type="submit" expand="block" fill="outline" [disabled]="!validationsForm.valid">Submit</ion-button>
+  </form>
+</ion-content>
+ 

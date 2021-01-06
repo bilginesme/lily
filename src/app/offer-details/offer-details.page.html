@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Offer Details
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="offer">
+  <ion-row>
+    <ion-col>
+      <small>{{offer.Id}}</small>
+      <h2>{{offer.Title}}</h2>
+      <h5>{{strCategory}}</h5>
+
+      <app-image-shell class="friend-picture" [src]="offer.CategoryImageFullLazy" (click)="onOfferPage(offer.Id)"></app-image-shell>
+      
+      <p class="info-paragraph">
+        <br><br>
+        {{offer.Body}}
+      </p>
+    </ion-col>  
+  </ion-row>  
+</ion-content>
